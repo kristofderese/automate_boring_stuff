@@ -18,3 +18,13 @@ while True:
         break
 print("Access granted!")
 
+x = 0
+for x in range(10):
+    x = x + 1
+    print(x)
+
+i = 0
+while i < 10:
+    i = i + 1
+    print(i)
+    continue
