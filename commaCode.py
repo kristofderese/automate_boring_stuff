@@ -1,6 +1,6 @@
 import sys
 
-def comma_code(input_list): # Verander 'list' naar 'input_list' om conflicten te vermijden
+def comma_code(input_list):
     # 1. Controleer of de input een lijst is
     if not isinstance(input_list, list):
         # Het is beter om een specifiekere uitzondering te raisen, zoals TypeError
