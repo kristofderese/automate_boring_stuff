@@ -14,7 +14,27 @@ def create_list():
             random_result = "H"
             list_words.append(random_result)
         else:
-            random_result = "S"
+            random_result = "T"
             list_words.append(random_result)
+    return list_words
+
+def streak_check(some_list):
+    # 'i' moet hier een integer index zijn, geen element uit de lijst
+    for i in range(len(some_list) - 5): # Loop over de indexen
+        current_slice = some_list[i : i + 6]
+        if current_slice == ['H','H','H','H','H','H'] or \
+           current_slice == ['T','T','T','T','T','T']:
+            return True
+    return False
+
+count = 0
+for x in range(10000):
+    list_to_check = create_list()
+    if streak_check(list_to_check):
+        count = count + 1
+
+percentage = (count / 10000) * 100
+print(f'Een reeks bevat een streak {percentage:.2f}% van de tijd.')
+
 
 
